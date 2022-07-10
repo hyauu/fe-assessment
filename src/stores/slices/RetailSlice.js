@@ -1,6 +1,6 @@
 // flow
 import { createSlice } from "@reduxjs/toolkit";
-import type RetailState from "../../types/retail.js";
+import type { RetailState } from "../../types/retail.js";
 
 const initialState: RetailState = {
   id: "",

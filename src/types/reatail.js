@@ -1,11 +1,14 @@
 // flow
-export type RetailReview = Array<{
+
+// @flow
+type RetailReview = Array<{
   customer: string,
   review: string,
   score: number,
 }>;
 
-export type RetailSale = {
+// @flow
+type RetailSale = {
   weekEnding: string,
   retailSales: number,
   wholesaleSales: number,
@@ -13,6 +16,7 @@ export type RetailSale = {
   retailerMargin: number,
 };
 
+// @flow
 export type RetailState = {
   id: string,
   title: string,
