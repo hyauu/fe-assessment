@@ -18,7 +18,7 @@ export type RetailState = {
   title: string,
   image: string,
   subtitle: string,
-  breand: string,
+  brand: string,
   reviews: RetailReview,
   details: Array<string>,
   tags: Array<string>,

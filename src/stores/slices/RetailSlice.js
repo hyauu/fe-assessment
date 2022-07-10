@@ -2,13 +2,27 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type RetailState from "../../types/retail.js";
 
-const initialState: RetailState = {};
+const initialState: RetailState = {
+  id: "",
+  title: "",
+  image: "",
+  subtitle: "",
+  brand: "",
+  reviews: [],
+  tags: [],
+  sales: [],
+};
 
 export const retailSlice = createSlice({
   name: "retail",
   initialState: initialState,
   reducers: {
-    setState: (state, action) => (state = action.playload),
+    setState: (state, action) => {
+      const data = action.payload;
+      Object.keys(state).forEach((key) => {
+        state[key] = data[key];
+      });
+    },
   },
 });
 
