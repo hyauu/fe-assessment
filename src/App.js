@@ -1,12 +1,12 @@
-// @flow
+// flow
 import * as React from "react";
 import { getRetailInfo } from "./network/retailService.js";
 import { useDispatch } from "react-redux";
 import { setState } from "./stores/slices/RetailSlice.js";
 import type { RetailState } from "./types/reatail.js";
 import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Header from "./component/header/Header.js";
+import Header from "./components/header/Header.react.js";
+import LeftBar from "./components/leftBar/LeftBar.react.js";
 
 function App(): React.Node {
   const dispatch = useDispatch();
@@ -15,13 +15,16 @@ function App(): React.Node {
 
   return (
     <div className="container-fluid">
-      <Row>
+      <div className="row">
         <Header />
-      </Row>
-      <Row>
-        <Col sm={4}>{data.title}</Col>
-        <Col sm={8}>2 of 3</Col>
-      </Row>
+      </div>
+      <br />
+      <div className="row">
+        <Col sm={2}>
+          <LeftBar />
+        </Col>
+        {/* <Col sm={10}>2 of 3</Col> */}
+      </div>
     </div>
   );
 }

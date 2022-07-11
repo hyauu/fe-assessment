@@ -11,6 +11,7 @@ const initialState: RetailState = {
   reviews: [],
   tags: [],
   sales: [],
+  details: [],
 };
 
 export const retailSlice = createSlice({
