@@ -21,14 +21,16 @@ const stylex = {
 export default function LeftBar(): React.Node {
   const imgURL: string = useSelector((state) => state.retail.image);
   const title: string = useSelector((state) => state.retail.title);
-  const details = useSelector((state) => state.retail.details);
-  const tags = useSelector((state) => state.retail.tags).map((tag, idx) => {
-    return (
-      <span className="p-2 shadow-sm" key={idx} style={stylex.tag}>
-        {tag}
-      </span>
-    );
-  });
+  const details: Array<string> = useSelector((state) => state.retail.details);
+  const tags: Array<React.Node> = useSelector((state) => state.retail.tags).map(
+    (tag, idx) => {
+      return (
+        <span className="p-2 shadow-sm" key={idx} style={stylex.tag}>
+          {tag}
+        </span>
+      );
+    }
+  );
   return (
     <div
       className="d-flex shadow flex-column justify-content-start align-items-center"

@@ -7,6 +7,11 @@ import type { RetailState } from "./types/reatail.js";
 import Col from "react-bootstrap/Col";
 import Header from "./components/header/Header.react.js";
 import LeftBar from "./components/leftBar/LeftBar.react.js";
+import MainViewer from "./components/mainView/MainView.react.js";
+
+const stylex = {
+  container: { height: "100vh", overflow: "hidden" },
+};
 
 function App(): React.Node {
   const dispatch = useDispatch();
@@ -14,7 +19,7 @@ function App(): React.Node {
   dispatch(setState(data));
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" style={stylex.container}>
       <div className="row">
         <Header />
       </div>
@@ -23,7 +28,9 @@ function App(): React.Node {
         <Col sm={2}>
           <LeftBar />
         </Col>
-        {/* <Col sm={10}>2 of 3</Col> */}
+        <Col sm={10}>
+          <MainViewer />
+        </Col>
       </div>
     </div>
   );

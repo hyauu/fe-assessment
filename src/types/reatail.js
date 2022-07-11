@@ -8,7 +8,7 @@ type RetailReview = Array<{
 }>;
 
 // @flow
-type RetailSale = {
+export type RetailSale = {
   weekEnding: string,
   retailSales: number,
   wholesaleSales: number,
