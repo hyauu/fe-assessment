@@ -38,13 +38,16 @@ export default function MainView(): React.Node {
   saleData.forEach((sale) => {
     const key: number = parseInt(sale.weekEnding.split("-")[1]);
     const month: string = toMonthName(key);
-    let item: SaleItem = salesByMonth.find((item) => item.month === month) ?? {
-      sale: 0,
-      month,
-      key,
-    };
+    let item: SaleItem = salesByMonth.find((item) => item.month === month);
+    if (item == null) {
+      item = {
+        sale: 0,
+        month,
+        key,
+      };
+    }
     item["sale"] += sale.retailSales;
-    salesByMonth = salesByMonth.filter((item) => item.month !== month) ?? [];
+    salesByMonth = salesByMonth.filter((item) => item.month !== month);
     salesByMonth.push(item);
   });
   salesByMonth.sort((a, b) => a.key - b.key);
