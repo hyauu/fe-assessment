@@ -10,7 +10,7 @@ import LeftBar from "./components/leftBar/LeftBar.react.js";
 import MainViewer from "./components/mainView/MainView.react.js";
 
 const stylex = {
-  container: { height: "100vh", overflow: "hidden" },
+  container: { height: "100%", overflow: "auto" },
 };
 
 function App(): React.Node {

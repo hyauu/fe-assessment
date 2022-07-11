@@ -12,7 +12,7 @@ type SaleItem = {
 
 const stylex = {
   contianer: {
-    height: "100vh",
+    height: "100%",
   },
   tableContainer: {
     height: "75vh",

@@ -3,7 +3,7 @@ import * as React from "react";
 import { useSelector } from "react-redux";
 const stylex = {
   contianer: {
-    height: "100vh",
+    height: "100%",
   },
   img: {
     height: "20vh",
