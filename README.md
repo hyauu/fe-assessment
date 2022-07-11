@@ -1,4 +1,4 @@
-# SackLine Front-End Eng Intern OA
+# StackLine Front-End Eng Intern OA
 
 ## Tech Stack
 
