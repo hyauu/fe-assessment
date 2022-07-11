@@ -67,6 +67,7 @@ export default function MainView(): React.Node {
     <div style={stylex.contianer}>
       <div className="d-flex shadow flex-column justify-content-start align-items-center">
         <div className="p2">
+          <h6>Retail Sales</h6>
           <LineChart
             width={730}
             height={350}
